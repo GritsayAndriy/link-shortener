@@ -13,10 +13,10 @@ class GenerateLinkController extends Controller
         $attributes = $request->validate([
             'url' => 'required|string',
             'max_redirect' => 'nullable|integer',
-            'end_life' => 'nullable|date_format:H:i',
+            'expired_at' => 'nullable|date_format:H:i',
         ]);
 
-        $attributes['end_life'] = $this->addTimeToCurrentDate($attributes['end_life']);
+        $attributes['expired_at'] = $this->addTimeToCurrentDate($attributes['expired_at']);
         $attributes['token'] = $this->generateToken();
         Link::create($attributes);
 

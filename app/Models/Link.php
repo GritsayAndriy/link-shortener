@@ -10,7 +10,7 @@ class Link extends Model
     use HasFactory;
 
     protected $fillable = [
-        'url', 'token', 'max_redirect', 'end_life'
+        'url', 'token', 'max_redirect', 'expired_at'
     ];
 
     protected $casts = [

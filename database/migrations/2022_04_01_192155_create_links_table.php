@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('token', 8);
             $table->integer('current_redirect')->default(0);
             $table->string('max_redirect')->nullable();
-            $table->timestamp('end_life');
+            $table->timestamp('expired_at');
             $table->timestamps();
         });
     }

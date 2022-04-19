@@ -21,9 +21,9 @@
                         </div>
                         <div class="col">
                             <label for="periodLimit" class="form-label">Period limit</label>
-                            <input type="time" id="periodLimit" name="end_life"
-                                   class="@error('end_life') is-invalid @enderror form-control">
-                            @error('end_life')<div class="invalid-feedback">{{$message}}</div>@enderror
+                            <input type="time" id="periodLimit" name="expired_at"
+                                   class="@error('expired_at') is-invalid @enderror form-control">
+                            @error('expired_at')<div class="invalid-feedback">{{$message}}</div>@enderror
                         </div>
                     </div>
                     <div>
